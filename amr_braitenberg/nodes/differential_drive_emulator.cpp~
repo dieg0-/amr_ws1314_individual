@@ -25,7 +25,7 @@ void wheelSpeedCallback(const amr_msgs::WheelSpeeds::ConstPtr& msg)
   // Instructions: compute linear and angular components and
   //               fill in the twist message.
   
-  //linear v = [(Vr + Vl) / 2]
+  linear v = [(Vr + Vl) / 2]
   //double wheel_radius = wheel_diamater / 2;
   twist.linear.x = ((speeds[0] + speeds[1]) / 2);
 
