@@ -25,7 +25,12 @@ void reconfigureCallback(amr_braitenberg::BraitenbergVehicleConfig &config, uint
   //       following construction:
   //       vehicle = BraitenbergVehicle::UPtr(new BraitenbergVehicle(...))
   
-  //Create a vehicle of type A with factor 1.
+  /**    
+    *   config.type contains an object of type 'int' that corresponds to an object of type BraitenbergVehicle::Type
+    *   Eg. TYPE_A, TYPE_B (enums)
+    *   The following line initializes an instance of the vehicle with the corresponding type.
+    *
+    **/  
   
   vehicle = BraitenbergVehicle::UPtr(new BraitenbergVehicle((BraitenbergVehicle::Type)config.type, config.factor1, config.factor2));
 
@@ -37,7 +42,11 @@ void reconfigureCallback(amr_braitenberg::BraitenbergVehicleConfig &config, uint
 /** Sonar callback is triggered every time the Stage node publishes new data
   * to the sonar topic. */
 void sonarCallback(const amr_msgs::Ranges::ConstPtr& msg)
-{
+{ 
+  /**
+    *   Initializes both speeds with 0, they will later be updated depending on the parameters received:
+    *   ranges[0].range and ranges[1].range.
+    **/
   amr_msgs::WheelSpeeds m;
   m.speeds = {0, 0};
 
