@@ -39,6 +39,7 @@ void reconfigureCallback(amr_braitenberg::BraitenbergVehicleConfig &config, uint
 void sonarCallback(const amr_msgs::Ranges::ConstPtr& msg)
 {
   amr_msgs::WheelSpeeds m;
+  m.speeds = {0, 0};
 
   //==================== YOUR CODE HERE ====================
   // Instructions: based on the ranges reported by the two
