@@ -24,8 +24,13 @@ void BraitenbergVehicle::computeWheelSpeeds(float left_in, float right_in, float
   //               factor2_ (if applicable).
 
   //TEST EXAMPLE
-   left_in = left_out;
-   right_in = right_out;
+   if(type_ == BraitenbergVehicle::Type::TYPE_A){
+   	left_out = left_in;
+   	right_out = right_in;
+   }else if(type_ == BraitenbergVehicle::TYPE_B){
+        left_out = right_in;
+        right_out = left_in;
+   }
   // =======================================================
 }
 
