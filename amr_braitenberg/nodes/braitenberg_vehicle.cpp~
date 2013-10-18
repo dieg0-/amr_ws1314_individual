@@ -27,7 +27,7 @@ void reconfigureCallback(amr_braitenberg::BraitenbergVehicleConfig &config, uint
   
   //Create a vehicle of type A with factor 1.
   
-  vehicle = BraitenbergVehicle::UPtr(new BraitenbergVehicle(BraitenbergVehicle::Type::TYPE_A, config.factor1, config.factor2));
+  vehicle = BraitenbergVehicle::UPtr(new BraitenbergVehicle(BraitenbergVehicle::Type)config.type, config.factor1, config.factor2));
 
   // =======================================================
 
@@ -47,7 +47,7 @@ void sonarCallback(const amr_msgs::Ranges::ConstPtr& msg)
   //
   // Hint: use vehicle->computeWheelSpeeds(...) function.
   //header: void computeWheelSpeeds(float left_in, float right_in, float& left_out, float& right_out);  
-  vehicle->computeWheelSpeeds(3.0, 3.0, m.speeds[0], m.speeds[1]);
+  vehicle->computeWheelSpeeds(msg->ranges[0].range, msg->ranges[1].range, m.speeds[0], m.speeds[1]);
 
   // =======================================================
 

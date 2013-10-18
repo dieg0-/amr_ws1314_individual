@@ -27,7 +27,7 @@ void reconfigureCallback(amr_braitenberg::BraitenbergVehicleConfig &config, uint
   
   //Create a vehicle of type A with factor 1.
   
-  vehicle = BraitenbergVehicle::UPtr(new BraitenbergVehicle(BraitenbergVehicle::Type::TYPE_A, config.factor1, config.factor2));
+  vehicle = BraitenbergVehicle::UPtr(new BraitenbergVehicle((BraitenbergVehicle::Type)config.type, config.factor1, config.factor2));
 
   // =======================================================
 
