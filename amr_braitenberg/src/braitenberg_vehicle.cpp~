@@ -1,5 +1,4 @@
 #include "braitenberg_vehicle.h"
-#include <iostream>
 
 BraitenbergVehicle::BraitenbergVehicle()
 : type_(TYPE_A)
@@ -24,8 +23,7 @@ void BraitenbergVehicle::computeWheelSpeeds(float left_in, float right_in, float
   //               private fields type_, factor1_, and
   //               factor2_ (if applicable).
 
-   int i = 2;
-   std::cout << left_in << " " << right_in << std::endl;
+  //TEST EXAMPLE
    left_in = left_out;
    right_in = right_out;
   // =======================================================
