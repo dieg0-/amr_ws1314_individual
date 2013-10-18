@@ -1,0 +1,12 @@
+Braitenberg Behaviors
+================================
+
+Agent Types
+-------------------------
+* TYPE_A: This type couples each motor or wheel with the sonar directly placed on the same size of the robot. Therefore, when the left sonar
+	  detects an obstacle, the left wheel will increase its speed, making the robot move to the right, and vice versa. 
+* TYPE_B: This type couples the wheels in an inverse way, the left sonar with the right wheel and vice versa. Therefore, when the left sonar
+    	  detects an obstacle, the right wheel will increase its speed, making the robot move to the left (towards the obstacle), and 
+          eventually crashing.
+* TYPE_C: mojombo/god@be6a8cc1c1ecfe9489fb51e4869af15a13fc2cd2
+
