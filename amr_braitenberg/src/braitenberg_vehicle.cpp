@@ -23,8 +23,9 @@ void BraitenbergVehicle::computeWheelSpeeds(float left_in, float right_in, float
   //               private fields type_, factor1_, and
   //               factor2_ (if applicable).
 
-  //left_out = factor1(1.0)*left_in;
-  //right_out = factor1(1.0)*right_in;
+  //TEST EXAMPLE
+   left_in = left_out;
+   right_in = right_out;
   // =======================================================
 }
 
